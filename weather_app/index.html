@@ -7,23 +7,37 @@
   </head>
   <body>
     <div class="container">
+      <header>
 
-      <form>
-	       <input id="zip" type="text" placeholder="Enter zip code"/>
-	       <input id="enterZip" type="submit" value="Get weather" />
-      </form>
-      <h2 id="city">Tylertown</h2>
+        <hr>
+        <form>
+	         <input id="zip" type="text" placeholder="Enter zip code"/>
+	         <input id="enterZip" type="submit" value="Get weather" />
+       </form>
+       <hr>
+       <h2 class="current-weather">Current Weather</h2>
+    </header>
+      <div id="city"><h2></h2></div>
 
       <div class="middle">
-        <img src="" alt="icon" id="icon">
+        <!-- <img src="" alt="icon" id="icon"> -->
           <div class="degrees">
-            <h1 id="temp"></h1>
-            <span>&#176</span>
+              <h1 id="temperature"></h1>
+              <span>&#176</span>
           </div>
           <h3 id="description"></h3>
-      </div>
+    </div>
+    <div class ="bottom">
+<div id="date">
+</div>
+<div id="temp">
 
 
+</div>
+<div id="desc">
+
+</div>
+</div>
     </div>
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

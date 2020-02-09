@@ -1,12 +1,12 @@
 
-* {
+/* * {
   border: 1px solid gold;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+  } */
 
-  body {
+   body {
     /* height: 100vh;
     width: 100vw;
     display: flex;
@@ -19,17 +19,23 @@
   }
 
   .container {
-    math-width: 550px;
+    max-width: 550px;
     height: 100vh;
     border: 1px solid black;
     margin: 0 auto;
     display: flex;
-    padding: 25px 5px;
+    padding: 20px 5px;
     display: flex;
-    flex-drection: column;
+    flex-direction: column;
     align-items: center;
   }
+form {
+  text-align: center;
+}
 
+h1 {
+  font-size: 3rem;
+}
 h2 {
   font-size: 3rem;
 }
@@ -39,7 +45,7 @@ h3 {
 }
 
 span {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .degrees {
@@ -47,5 +53,4 @@ span {
   flex-direction: row;
   justify-content: center;
 
-
-}
+  }
