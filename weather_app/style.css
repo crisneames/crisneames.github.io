@@ -1,0 +1,51 @@
+
+* {
+  border: 1px solid gold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  body {
+    /* height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    font-family: sans-serif;
+    color: white;
+  }
+
+  .container {
+    math-width: 550px;
+    height: 100vh;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: flex;
+    padding: 25px 5px;
+    display: flex;
+    flex-drection: column;
+    align-items: center;
+  }
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+span {
+  font-size: 2rem;
+}
+
+.degrees {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+
+}
