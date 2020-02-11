@@ -1,5 +1,34 @@
 //console.log('It works!')
 
+// hide and show openModal
+
+// Grabbing About button
+const $openBtn = $('#openModal');
+
+// Grabbing modal element
+const $modal = $('#modal');
+
+// Grabbing close button
+const $closeBtn = $('#close');
+
+// Event handler to open the modal
+const openModal = () => {
+  $modal.css('display', 'block');
+}
+
+// Event handler to close the modal
+const closeModal = () => {
+  $modal.css('display', 'none');
+}
+
+//Add event listener to About button
+$openBtn.on('click', openModal);
+
+//Add event listener to Close button
+$closeBtn.on('click', closeModal);
+
+setTimeout(openModal, 5000);
+
 $('#enterZip').on("click", (event)=>{
   event.preventDefault();
   let zipCode = $('#zip').val();
@@ -108,11 +137,5 @@ const dateConverter = (dateInHex) => {
  // Display date time in MM-dd-yyyy h:m:s format
  let convdataTime = month+'-'+day+'-'+year+' '+hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
- //Display to screen
- //console.log($('.table-header').html(convdataTime))
-
  return convdataTime
-
-
-
 }

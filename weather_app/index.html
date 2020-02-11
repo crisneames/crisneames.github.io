@@ -8,10 +8,24 @@
   <body>
     <div class="container">
       <header>
+
+            <div id="modal">
+              <div id="modal-textbox">
+                <h1 id="weather-app">Weather App</h1>
+                  <p id="summary">This Weather App shows the current forecast as well as the forecast for every three hours.</p>
+
+                  <div id="modal-footer">
+                  <button class="modal-buttons" id="close" href="#">Close</button>
+                    </div>
+                  </div>
+                </div>
         <form>
+          <button class="modal-buttons" id="openModal">About</button>
 	         <input id="zip" type="text" placeholder="Enter zip code"/>
-	         <input id="enterZip" type="submit" value="Get weather" />
+	         <input id="enterZip" type="submit" class="modal-buttons" value="Get weather" />
          </form>
+
+
     </header>
       <h2 id="city"></h2>
 
@@ -31,7 +45,7 @@
 
 
       </div>
-    </div>
+
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

@@ -1,6 +1,5 @@
 
 * {
-  /* border: 1px solid gold; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,7 +14,6 @@
   }
 
   .container {
-
     width: 550px;
     height: 100vh;
     margin: 0 auto;
@@ -24,14 +22,21 @@
     flex-direction: column;
     align-items: center;
   }
+
 form {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   }
 
 h1 {
   font-size: 4rem;
 }
+
+#weather-app {
+  text-align: center;
+  font-size: 2rem;
+}
+
 h2 {
   font-size: 2rem;
 }
@@ -48,7 +53,7 @@ span {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  }
+}
 
 .bottom {
   display: flex;
@@ -56,7 +61,7 @@ span {
   justify-content: space-around;
   width: 550px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 50px;
 
 }
 
@@ -67,6 +72,10 @@ img {
 
 p {
   font-size: 1.5rem;
+}
+
+#summary {
+  padding: 15px;
 }
 
 table {
@@ -82,6 +91,52 @@ table, th, td {
    padding: 10px;
    justify-content: center;
 
+}
+
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+  display: none;
+/*Set this to `none` so that the modal does not show initially on page load.*/
+}
+
+#modal-textbox {
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+  margin: 150px auto;
+  color: gray;
+	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	/*This will give the box some depth.*/
+  padding: 5%;
+  line-height: 220%;
+}
+#open-modal {
+  text-align: right;
+}
+#modal-footer {
+	text-align: right;
+}
+
+.modal-buttons {
+	padding: 10px 18px;
+	background-color: rgb(68, 109, 151);
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
