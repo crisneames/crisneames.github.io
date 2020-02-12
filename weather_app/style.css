@@ -13,6 +13,7 @@
     color: white;
   }
 
+/* holds current weather */
   .container {
     width: 550px;
     height: 100vh;
@@ -23,68 +24,36 @@
     align-items: center;
   }
 
+/* center the form */
 form {
   text-align: center;
   padding-bottom: 25px;
   }
 
-h1 {
-  font-size: 4rem;
-}
-
-#weather-app {
-  text-align: center;
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-span {
-  font-size: 2.5rem;
-}
-
+/* temperature + degree symbol */
 .degrees {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+/* Div around table */
 .bottom {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 550px;
-  margin: 0 auto;
+  justify-content: space-between;
+   /* width: 550px; */
+  margin: 0 10%;
   padding-top: 50px;
-
+  min-width: 700px;
 }
 
-img {
-  width: 125px;
-  height: 125px;
-}
-
-p {
-  font-size: 1.5rem;
-}
-
-#summary {
-  padding: 15px;
-}
-
+/* Table formatting */
 table {
-  width: 550px;
   border-spacing: 5px;
-  display: flex;
-  flex-wrap: wrap;
 
-
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 table, th, td {
@@ -93,6 +62,41 @@ table, th, td {
 
 }
 
+  /* Text formatting */
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  span {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+/* icon size */
+img {
+  width: 125px;
+  height: 125px;
+}
+
+/* Modal Window */
+
+#weather-app {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
 #modal {
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
@@ -113,7 +117,7 @@ table, th, td {
 	height: 350px;
 	width: 550px;
 	border-radius: 2px;
-  margin: 150px auto;
+  margin: 50px auto;
   color: gray;
 	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -137,15 +141,4 @@ table, th, td {
 	color: white;
 	font-family: 'Arial';
 	cursor: pointer;
-}
-
-@media screen and (max-width: 600px) {
-
-    /* direction: flex;
-    flex-direction: column;
-    flex-wrap: wrap; */
-    /* .deviceWidth {width:280px!important; padding:0;}
-  .center {text-align: center!important;}
-    width: 100%; */
-
 }
