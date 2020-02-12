@@ -49,7 +49,7 @@ $('#enterZip').on("click", (event)=>{
           }),
           // 3 hour forecast
           $.ajax({
-              url: `http://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&appid=552f303f659425cbc193137deb0f8bbc&units=imperial`,
+              url: `https://api.openweathermap.org/data/2.5/forecast?zip=${zipCode}&appid=552f303f659425cbc193137deb0f8bbc&units=imperial`,
               success: (data) => {
                 //  alert('3 hour forcast complete')
                   getForcastedWeather(data)
