@@ -85,6 +85,10 @@ img {
   height: 125px;
 }
 
+#zip {
+  padding: 5px;
+}
+
 /* Modal Window */
 
 #weather-app {

@@ -2,7 +2,7 @@
 
 
 // show pic when site loads
- $("#icon").attr("src", `http://openweathermap.org/img/w/10d.png`);
+ $("#icon").attr("src", `https://openweathermap.org/img/w/10d.png`);
 
 //Modal
 
@@ -69,7 +69,7 @@ const getCurrentWeather = (data) => {
   // Display city
   $('#city').html(data.name);
   // Display icon
-    $("#icon").attr("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+    $("#icon").attr("src", `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
 }
 // get 3 hour forecast
 const getForcastedWeather = (data) => {
@@ -96,10 +96,10 @@ $('.bottom').empty();
     const $row2 = $('<tr>')
           $('.list-container').append($row2)
     // icons
-    const iconurl = (`<img src=http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png />`);
+    const iconurl = (`https://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`);
     const $icon = $(`<td> id="wicon"`)
           $("#icon").attr("src", iconurl);
-          $($icon).html(iconurl)
+          $($icon).html(`<img src=${iconurl} />`)
           $row2.append($icon)
     // temperature
     const $temp = $(`<td id="temperature">${Math.floor(data.list[i].main.temp)}</td>`);
