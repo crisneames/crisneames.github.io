@@ -1,31 +1,31 @@
 
 
-// hide and show openModal
 
-// Grabbing About button
-const $openBtn = $('#openModal');
-// Grabbing modal element
+// show pic when site loads
+ $("#icon").attr("src", `http://openweathermap.org/img/w/10d.png`);
+
+//Modal
+
+// modal element
 const $modal = $('#modal');
-// Grabbing close button
+// close button
 const $closeBtn = $('#close');
 
 // Event handler to open the modal
 const openModal = (event) => {
-  //event.preventDefault();
-  $modal.css('display', 'block');
+ $modal.css('display', 'block');
 }
 // Event handler to close the modal
 const closeModal = () => {
   $modal.css('display', 'none');
 }
-//Add event listener to About button
-$openBtn.on('click', openModal);
-//Add event listener to Close button
+// Event listener to Close button
 $closeBtn.on('click', closeModal);
 
 // Timeout so modal will show after 5 Seconds
 setTimeout(openModal, 5000);
 
+// Weather App
 // on click event
 $('#enterZip').on("click", (event)=>{
   event.preventDefault();
@@ -69,11 +69,7 @@ const getCurrentWeather = (data) => {
   // Display city
   $('#city').html(data.name);
   // Display icon
-  icon = data.weather[0].icon
-  // let iconurl = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-// let iconurl = "http://openweathermap.org/img/w/" + icon + ".png";
-
-  $("#icon").attr("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+    $("#icon").attr("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
 }
 // get 3 hour forecast
 const getForcastedWeather = (data) => {
@@ -81,8 +77,8 @@ $('.bottom').empty();
 
 
     for (let i = 0; i < 5; i++) {
-    // Put date in a variable
 
+    // Put date in a variable
     const date = (data.list[i].dt)
     // create table for 3 hour forcasted weather
     const $list = $('<table>').addClass("list-container")
@@ -106,10 +102,10 @@ $('.bottom').empty();
           $($icon).html(iconurl)
           $row2.append($icon)
     // temperature
-    const $temp = $(`<td id="${data[i]}-temperature">${Math.floor(data.list[i].main.temp)}</td>`);
+    const $temp = $(`<td id="temperature">${Math.floor(data.list[i].main.temp)}</td>`);
     //description
     $row2.append($temp)
-    const $desc = $(`<td id="${data[i]}-desc">${data.list[i].weather[0].description}</td>`);
+    const $desc = $(`<td id="desc">${data.list[i].weather[0].description}</td>`);
      $row2.append($desc)
  }
 }

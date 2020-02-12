@@ -51,15 +51,11 @@ form {
 /* Table formatting */
 table {
   border-spacing: 5px;
-
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 
 table, th, td {
    padding: 10px;
    justify-content: center;
-
 }
 
   /* Text formatting */
