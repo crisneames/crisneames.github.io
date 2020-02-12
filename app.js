@@ -62,7 +62,7 @@ $('#enterZip').on("click", (event)=>{
 });
 // get current weather
 const getCurrentWeather = (data) => {
-  // Dispay weather description
+    // Dispay weather description
   $('#description').html(data.weather[0].description);
   // Display temperature
   $('#temperature').html(Math.floor(data.main.temp)) + "°<span>F</span>";
